@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-08-23T11:49:21Z" product-name="map">
+		<header/>
+		<body>
+			<trans-unit id="settings.map.options.center">
+				<source>Center</source>
+			</trans-unit>
+			<trans-unit id="settings.map.options.center.map">
+				<source>Center - map</source>
+			</trans-unit>
+			<trans-unit id="settings.map.options.center.latitude">
+				<source>Center - latitude</source>
+			</trans-unit>
+			<trans-unit id="settings.map.options.center.longitude">
+				<source>Center - longitude</source>
+			</trans-unit>
+			<trans-unit id="settings.map.options.dimHeight">
+				<source>Height (%,px,vh,..)</source>
+			</trans-unit>
+			<trans-unit id="settings.map.options.dimWidth">
+				<source>Width (%,px,vh,..)</source>
+			</trans-unit>
+			<trans-unit id="settings.map.options.types">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="settings.map.options.types.coordinate">
+				<source>Coordinate (development)</source>
+			</trans-unit>
+			<trans-unit id="settings.map.options.types.hybrid">
+				<source>Hybrid (mix of roadmap and satellite)</source>
+			</trans-unit>
+			<trans-unit id="settings.map.options.types.roadmap">
+				<source>Roadmap (road map view)</source>
+			</trans-unit>
+			<trans-unit id="settings.map.options.types.satellite">
+				<source>Satellite (Google Earth satellite)</source>
+			</trans-unit>
+			<trans-unit id="settings.map.options.types.terrain">
+				<source>Terrain (physical map based on terrain)</source>
+			</trans-unit>
+			<trans-unit id="settings.map.options.zoom">
+				<source>Zoom</source>
+			</trans-unit>
+			<trans-unit id="settings.map.overlays.categories.active">
+				<source>Categories - active</source>
+			</trans-unit>
+			<trans-unit id="settings.map.overlays.categories.available">
+				<source>Categories - available</source>
+			</trans-unit>
+			<trans-unit id="settings.map.view.type">
+				<source>View type</source>
+			</trans-unit>
+			<trans-unit id="settings.map.view.type.map_and_menu">
+				<source>Map and menu</source>
+			</trans-unit>
+			<trans-unit id="settings.map.view.type.map_only">
+				<source>Map only</source>
+			</trans-unit>
+			<trans-unit id="settings.map.view.type.menu_only">
+				<source>Menu only</source>
+			</trans-unit>
+			<trans-unit id="sheet.categories">
+				<source>Categories</source>
+			</trans-unit>
+			<trans-unit id="sheet.general">
+				<source>General</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

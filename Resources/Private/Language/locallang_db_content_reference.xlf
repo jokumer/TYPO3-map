@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-03-04T13:30:00Z" product-name="map" target-language="da">
+		<header/>
+		<body>
+			<trans-unit id="tx_map_content_reference">
+				<source>Content reference</source>
+			</trans-unit>
+			<trans-unit id="tx_map_content_reference.fieldname">
+				<source>Foreign Field</source>
+			</trans-unit>
+			<trans-unit id="tx_map_content_reference.sorting_foreign">
+				<source>Sorting foreign</source>
+			</trans-unit>
+			<trans-unit id="tx_map_content_reference.table_local">
+				<source>Tabel</source>
+			</trans-unit>
+			<trans-unit id="tx_map_content_reference.tablenames">
+				<source>Table name</source>
+			</trans-unit>
+			<trans-unit id="tx_map_content_reference.uid_foreign">
+				<source>Used by elements</source>
+			</trans-unit>
+			<trans-unit id="tx_map_content_reference.uid_local">
+				<source>Content</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

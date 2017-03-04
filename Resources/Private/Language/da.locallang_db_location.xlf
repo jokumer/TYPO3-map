@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-08-23T11:49:21Z" product-name="map" target-language="da">
+		<header/>
+		<body>
+			<trans-unit id="tx_map_location">
+				<source>Map Location</source>
+				<target>Kortområde</target>
+			</trans-unit>
+			<trans-unit id="tx_map_location.address">
+				<source>Address</source>
+				<target>Adresse</target>
+			</trans-unit>
+			<trans-unit id="tx_map_location.category">
+				<source>Category</source>
+				<target>Kategori</target>
+			</trans-unit>
+			<trans-unit id="tx_map_location.city">
+				<source>City</source>
+				<target>By</target>
+			</trans-unit>
+			<trans-unit id="tx_map_location.country">
+				<source>Country</source>
+				<target>Land</target>
+			</trans-unit>
+			<trans-unit id="tx_map_location.description">
+				<source>Description</source>
+				<target>Beskrivelse</target>
+			</trans-unit>
+			<trans-unit id="tx_map_location.latitude">
+				<source>Latitude</source>
+				<target>Breddegrad</target>
+			</trans-unit>
+			<trans-unit id="tx_map_location.longitude">
+				<source>Longitude</source>
+				<target>Længdegrad</target>
+			</trans-unit>
+			<trans-unit id="tx_map_location.related_content">
+				<source>Related content</source>
+				<target>Relatered indhold</target>
+			</trans-unit>
+			<trans-unit id="tx_map_location.title">
+				<source>Title</source>
+				<target>Titel</target>
+			</trans-unit>
+			<trans-unit id="tx_map_location.zip">
+				<source>Zip</source>
+				<target>Postnummer</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

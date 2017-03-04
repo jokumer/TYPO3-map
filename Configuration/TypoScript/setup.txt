@@ -1,0 +1,196 @@
+/**
+ * PLUGIN
+ */
+plugin.tx_map {
+    view {
+        templateRootPaths.0 = {$plugin.tx_map.view.templateRootPath}
+        partialRootPaths.0 = {$plugin.tx_map.view.partialRootPath}
+        layoutRootPaths.0 = {$plugin.tx_map.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_map.persistence.storagePid}
+    }
+    settings {
+        // General
+        general {
+            // Debug
+            debug = 0
+            // JavaScript
+            includeJs {
+                tx_map {
+                    enableDefault = 1
+                    async = 0
+                }
+                googleMapsApi {
+                    enableDefault = 1
+                    async = 0
+                }
+            }
+            // Geolocate
+            geolocate {
+                default {
+                    latitude = 52.51
+                    longitude = 13.42
+                }
+                request.uri.pageTypeNum = 1472410000
+                // For texts see locallang.xlf pi.geolocate...
+            }
+        }
+        // Location
+        location {
+            options {
+                geolocate {
+                    enabled = 1
+                    // positionTrack = 0
+                }
+            }
+        }
+        // Map
+        map {
+            // view types: map_and_menu (default), map_only, menu_only
+            view.type = map_and_menu
+            // options for map API
+            options {
+                center.latitude = 55.65
+                center.longitude = 12.08
+                dimHeight = 100vh
+                dimWidth = 
+                scroll = false
+                types = roadmap,satellite,hybrid,terrain
+                zoom = 7
+                geolocate {
+                    enabled = 1
+                    positionMarkerIconPath = typo3conf/ext/map/Resources/Public/Icons/Frontend/MapMarker/point_e09712_yellow.svg
+                    positionTrack = 1
+                }
+            }
+            // overlays by categories
+            overlays {
+                categories.active = 
+                categories.available =
+                infowindow {
+                    cropMaxCharacters = 200
+                    icon {
+                        height = 30
+                        width = 30
+                    }
+                    height = 240px
+                    width = 240px
+                    /*
+                    category.[UID] {
+                        template = [NAME]
+                        linkPid = [PID]
+                    }
+                    */
+                }
+                request.uri.pageTypeNum = 1472420000
+            }
+        }
+    }
+}
+// Settings in all plugins
+plugin.tx_map_category < plugin.tx_map
+plugin.tx_map_geolocate < plugin.tx_map
+plugin.tx_map_location < plugin.tx_map
+plugin.tx_map_map < plugin.tx_map
+
+/**
+ * PAGE
+ */
+// Css
+page.includeCSS.tx_map_css = EXT:map/Resources/Public/Css/txmap.min.css
+// Page type - default
+tx_map_page_default = PAGE
+tx_map_page_default {
+    config{
+        additionalHeaders = Content-type:application/json
+        admPanel = 0
+        debug=0
+        disableAllHeaderCode=1
+        no_cache = 1
+    }
+    typeNum = 1472400000
+    10 = USER
+    10 {
+        userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+        vendorName = Jokumer
+        extensionName = Map
+        #pluginName = [pluginName]
+        #switchableControllerActions.[controllerName].[itemNum] = [actionName]
+    }
+}
+// Page type - geolocate
+tx_map_page_geolocate >
+tx_map_page_geolocate < tx_map_page_default
+tx_map_page_geolocate {
+    typeNum = 1472410000
+    10 {
+        pluginName = Geolocate
+        switchableControllerActions {
+            Map.1 = overlay
+            Map.2 = geolocate
+            Location.1 = list
+            Location.2 = listGeolocate
+        }
+    }
+}
+// Page type - map
+tx_map_page_map_overlays >
+tx_map_page_map_overlays < tx_map_page_default
+tx_map_page_map_overlays {
+    typeNum = 1472420000
+    10 {
+        pluginName = Map
+        switchableControllerActions {
+            Map.1 = overlay
+            Map.2 = geolocate
+        }
+    }
+}
+
+/**
+ * LIB
+ */
+// Rendering of related content
+lib.tx_map.render.relatedContent = RECORDS
+lib.tx_map.render.relatedContent {
+    tables = tt_content
+    source.current = 1
+    dontCheckPid = 1
+}
+
+/**
+ * DEBUG
+ */
+// Debug views
+[globalVar = GP:tx_map_map|debug = 1]
+    plugin.tx_map_map.settings.general.debug = 1
+[end]
+// JSON as HTML
+tx_map_page_map_overlays_debug < tx_map_page_default
+tx_map_page_map_overlays_debug {
+    config.additionalHeaders = Content-type:text/html
+    typeNum = 1472420001
+}
+[globalVar = TSFE:type = 1472420001]
+    plugin.tx_map_map.settings.map.overlays.request.uri.pageTypeNum = 1472420001
+[end]
+
+/**
+* HINT
+// Include another js, then default
+// Disable default
+plugin.tx_map_map.settings.general.includeJs.tx_map.enableDefault = 0
+// Include other
+page.includeJSFooterlibs.tx_map_default = EXT:map/Resources/Public/JavaScript/Frontend/txmap.min.js
+page.includeJSFooterlibs.tx_map_default.async = 0
+/// Include another API key as set in ExtConf
+// Disable default
+plugin.tx_map_map.settings.map.includeJs.googleMapsApi.enableDefault = 0
+// Include other
+page.includeJSFooterlibs.googleMapsApi = https://maps.googleapis.com/maps/api/js?key=[YOUR_API_KEY]&libraries=geometry&callback=initializeGoogleMap
+page.includeJSFooterlibs.googleMapsApi.external = 1
+page.includeJSFooterlibs.googleMapsApi.disableCompression = 1
+page.includeJSFooterlibs.googleMapsApi.excludeFromConcatenation = 1
+page.includeJSFooterlibs.googleMapsApi.async = 1
+*/

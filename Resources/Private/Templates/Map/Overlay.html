@@ -1,0 +1,19 @@
+<f:if condition="{overlay}">
+	<f:then>
+		<f:if condition="{overlay.type} == 'infowindow'">
+			<f:then>
+				<f:switch expression="{overlay.entryName}">
+					<f:case value="Location">
+						<f:render partial="Map/Overlay/Infowindow/Location" arguments="{location:overlay.entryData, template:overlay.template}"/>
+					</f:case>
+				</f:switch>
+			</f:then>
+			<f:else>
+				<!-- Error: No overlay type found #1474454214 -->
+			</f:else>
+		</f:if>
+	</f:then>
+	<f:else>
+		<!-- Error: No overlay found #1474454213 -->
+	</f:else>
+</f:if>

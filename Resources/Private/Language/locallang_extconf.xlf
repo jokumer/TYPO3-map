@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-08-23T11:49:21Z" product-name="map">
+		<header/>
+		<body>
+			<trans-unit id="googleMapsApiKey" xml:space="preserve">
+				<source>
+					Google Maps JavaScript ApiKey: This setting is for TYPO3 frontend and backend.
+					Visit https://developers.google.com/maps/documentation/javascript/get-api-key
+				</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-08-23T11:49:21Z" product-name="map">
+		<header/>
+		<body>
+			<trans-unit id="field.geocode">
+				<source>Geocode</source>
+			</trans-unit>
+			<trans-unit id="general.select.none">
+				<source>None</source>
+			</trans-unit>
+			<trans-unit id="map.closeMap">
+				<source>Close map</source>
+			</trans-unit>
+			<trans-unit id="map.displayMap">
+				<source>Display map</source>
+			</trans-unit>
+			<trans-unit id="map.displayMap.info">
+				<source>Display map and move the marker to your new position, it will automaticly writes new coordinates in the fields below. Optional further functions appears, if any are configurated.</source>
+			</trans-unit>
+			<trans-unit id="map.doGeocoding">
+				<source>Fetch coordinates from address fields</source>
+			</trans-unit>
+			<trans-unit id="map.doGeocoding.info">
+				<source>If map is displayed, filled address fields (address,zip,city,country) are used to recalculate coordinates using Google Geocoding. You can se results on map and adapt by moving marker position.</source>
+			</trans-unit>
+			<trans-unit id="map.fetchZoom">
+				<source>Fetch size from zoom</source>
+			</trans-unit>
+			<trans-unit id="map.fetchZoom.info">
+				<source>If map is displayed, view get zoomed into the size given in zoom field.</source>
+			</trans-unit>
+			<trans-unit id="palettes.address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="palettes.map">
+				<source>Map</source>
+			</trans-unit>
+			<trans-unit id="plugin.category.title">
+				<source>Categories</source>
+			</trans-unit>
+			<trans-unit id="plugin.location.title">
+				<source>Locations</source>
+			</trans-unit>
+			<trans-unit id="plugin.map.title">
+				<source>Google Maps</source>
+			</trans-unit>
+			<trans-unit id="tabs.related">
+				<source>Related</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

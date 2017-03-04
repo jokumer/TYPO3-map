@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-08-23T11:49:21Z" product-name="map" target-language="da">
+	<header/>
+		<body>
+			<trans-unit id="pi.geolocate.error">
+				<source>Error</source>
+				<target>Fejl</target>
+			</trans-unit>
+			<trans-unit id="pi.geolocate.error.browser">
+				<source>Error: Your browser does not support geolocation.</source>
+				<target>Fejl: Din browser understøtter ikke geolocation.</target>
+			</trans-unit>
+			<trans-unit id="pi.geolocate.error.geolocation">
+				<source>Error: The geolocation service failed.</source>
+				<target>Fejl: Geolocation service mislykkede.</target>
+			</trans-unit>
+			<trans-unit id="pi.geolocate.error.geolocation.watch">
+				<source>Error: The geolocation watch position failed.</source>
+				<target>Fejl: Geolocation position tracking mislykkede.</target>
+			</trans-unit>
+			<trans-unit id="pi.map.geolocate.myPosition.title">
+				<source>My position</source>
+				<target>Min position</target>
+			</trans-unit>
+			<trans-unit id="pi.map.overlay.infowindow.readmore">
+				<source>Read more</source>
+				<target>Læs mere</target>
+			</trans-unit>
+			<trans-unit id="tx_map_category">
+				<source>Category</source>
+				<target>Kategori</target>
+			</trans-unit>
+			<trans-unit id="tx_map_category.description">
+				<source>Description</source>
+				<target>Beskrivelse</target>
+			</trans-unit>
+			<trans-unit id="tx_map_category.icon">
+				<source>Icon</source>
+				<target>Ikon</target>
+			</trans-unit>
+			<trans-unit id="tx_map_category.parent">
+				<source>Parent</source>
+				<target>Overordnede</target>
+			</trans-unit>
+			<trans-unit id="tx_map_category.title">
+				<source>Title</source>
+				<target>Titel</target>
+			</trans-unit>
+			<trans-unit id="tx_map_category.title_language_overlay">
+				<source>Title OL</source>
+				<target>Titel OL</target>
+			</trans-unit>
+			<trans-unit id="tx_map_location">
+				<source>Location</source>
+				<target>Sted</target>
+			</trans-unit>
+			<trans-unit id="tx_map_location.address">
+				<source>Address</source>
+				<target>Adresse</target>
+			</trans-unit>
+			<trans-unit id="tx_map_location.category">
+				<source>Category</source>
+				<target>Kategori</target>
+			</trans-unit>
+			<trans-unit id="tx_map_location.city">
+				<source>City</source>
+				<target>By</target>
+			</trans-unit>
+			<trans-unit id="tx_map_location.country">
+				<source>Country</source>
+				<target>Land</target>
+			</trans-unit>
+			<trans-unit id="tx_map_location.description">
+				<source>Description</source>
+				<target>Beskrivelse</target>
+			</trans-unit>
+			<trans-unit id="tx_map_location.latitude">
+				<source>Latitude</source>
+				<target>Breddegrad</target>
+			</trans-unit>
+			<trans-unit id="tx_map_location.longitude">
+				<source>Longitude</source>
+				<target>Længdegrad</target>
+			</trans-unit>
+			<trans-unit id="tx_map_location.title">
+				<source>Title</source>
+				<target>Titel</target>
+			</trans-unit>
+			<trans-unit id="tx_map_location.zip">
+				<source>Zip</source>
+				<target>Postnummer</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-08-23T11:49:21Z" product-name="map" target-language="da">
+		<header/>
+		<body>
+			<trans-unit id="tx_map_category">
+				<source>Map Category</source>
+				<target>Kort-kategori</target>
+			</trans-unit>
+			<trans-unit id="tx_map_category.description">
+				<source>Description</source>
+				<target>Beskrivelse</target>
+			</trans-unit>
+			<trans-unit id="tx_map_category.icon">
+				<source>Icon</source>
+				<target>Ikon</target>
+			</trans-unit>
+			<trans-unit id="tx_map_category.parent">
+				<source>Parent</source>
+				<target>Overordnede</target>
+			</trans-unit>
+			<trans-unit id="tx_map_category.title">
+				<source>Title</source>
+				<target>Titel</target>
+			</trans-unit>
+			<trans-unit id="tx_map_category.title_language_overlay">
+				<source>Title language overlay</source>
+				<target>Titel på andre sprog</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

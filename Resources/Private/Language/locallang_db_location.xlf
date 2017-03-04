@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-08-23T11:49:21Z" product-name="map">
+		<header/>
+		<body>
+			<trans-unit id="tx_map_location">
+				<source>Map Location</source>
+			</trans-unit>
+			<trans-unit id="tx_map_location.address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="tx_map_location.category">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="tx_map_location.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_map_location.country">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="tx_map_location.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_map_location.latitude">
+				<source>Latitude</source>
+			</trans-unit>
+			<trans-unit id="tx_map_location.longitude">
+				<source>Longitude</source>
+			</trans-unit>
+			<trans-unit id="tx_map_location.related_content">
+				<source>Related content</source>
+			</trans-unit>
+			<trans-unit id="tx_map_location.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_map_location.zip">
+				<source>Zip</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

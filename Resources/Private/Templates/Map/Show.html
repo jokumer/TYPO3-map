@@ -1,0 +1,16 @@
+<f:layout name="Default"/>
+
+<f:section name="main">
+	<f:switch expression="{settings.map.view.type}">
+		<f:case value="map_and_menu">
+			<f:render partial="Map/Map" arguments="{_all}"/>
+			<f:render partial="Map/Menu" arguments="{_all}"/>
+		</f:case>
+		<f:case value="map_only">
+			<f:render partial="Map/Map" arguments="{_all}"/>
+		</f:case>
+		<f:case value="menu_only">
+			<f:render partial="Map/Menu" arguments="{_all}"/>
+		</f:case>
+	</f:switch>
+</f:section>

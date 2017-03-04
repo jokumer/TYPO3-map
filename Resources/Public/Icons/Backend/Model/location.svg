@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Tiny//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd">
+<svg version="1.1" baseProfile="tiny" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" xml:space="preserve">
+<g id="EXT:tracks">
+	<g id="mark">
+		<path fill="#4F4D40" d="M12.952,7.232l-3.78,8.042c-0.217,0.456-0.696,0.736-1.194,0.736s-0.976-0.28-1.184-0.736L3.002,7.232
+			C2.732,6.661,2.659,6.007,2.659,5.373c0-2.94,2.379-5.318,5.318-5.318c2.94,0,5.318,2.378,5.318,5.318
+			C13.296,6.007,13.224,6.661,12.952,7.232z M7.978,2.714c-1.464,0-2.659,1.195-2.659,2.659c0,1.465,1.195,2.66,2.659,2.66
+			c1.464,0,2.659-1.195,2.659-2.66C10.637,3.909,9.441,2.714,7.978,2.714z"/>
+	</g>
+</g>
+</svg>

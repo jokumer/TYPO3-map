@@ -1,0 +1,91 @@
+<f:if condition="{settings.googleMapsApiKey}">
+	<f:then>
+		<div class="tx_map_map">
+			<script src="{settings.googleMapsLibraryUrl}" type="text/javascript"></script>
+			<script src="{settings.geocodeJSFile}" type="text/javascript"></script>
+			<div class="form-control-wrap"
+				 id="tx_map_map_control"
+				 data-entry-default-latitude="{settings.fieldConfiguration.parameters.entryDefaultLatitude}"
+				 data-entry-default-longitude="{settings.fieldConfiguration.parameters.entryDefaultLongitude}"
+				 data-entry-field-latitude="{settings.fieldConfiguration.parameters.entryFieldLatitude}"
+				 data-entry-field-longitude="{settings.fieldConfiguration.parameters.entryFieldLongitude}"
+				 data-entry-field-zoom="{settings.fieldConfiguration.parameters.entryFieldZoom}"
+				 data-entry-table="{settings.fieldConfiguration.table}"
+				 data-entry-uid="{settings.fieldConfiguration.row.uid}"
+				 data-map-element-id="tx_map_map_canvas"
+				 data-map-default-zoom="{settings.fieldConfiguration.parameters.mapDefaultZoom}">
+				<f:render section="mapOptions" arguments="{mapOptions:settings.fieldConfiguration.parameters.mapOptions}"/>
+			</div>
+			<div id="tx_map_map_canvas"></div>
+		</div>
+	</f:then>
+	<f:else>
+		<div class="t3js-message typo3-message alert alert-warning" role="alert">
+			Check if Geocode ApiKey in Extensionmanager is set! #1471873065
+		</div>
+	</f:else>
+</f:if>
+
+<f:section name="mapOptions">
+	<f:if condition="{mapOptions}">
+		<f:for each="{mapOptions}" as="option">
+			<f:switch expression="{option}">
+				<f:case value="displayMap">
+					<f:render section="optionDisplayMap"/>
+				</f:case>
+				<f:case value="doGeocoding">
+					<f:render section="optionDoGeocoding"/>
+				</f:case>
+				<f:case value="fetchZoom">
+					<f:render section="optionFetchZoom"/>
+				</f:case>
+			</f:switch>
+		</f:for>
+		<span class="t3-help-link"
+			  href="#"
+			  data-trigger="click"
+			  data-content="
+<h4>{f:translate(key:'LLL:EXT:map/Resources/Private/Language/locallang_tca.xlf:map.displayMap')}</h4>
+<p class=&quot;t3-help-short&quot;>{f:translate(key:'LLL:EXT:map/Resources/Private/Language/locallang_tca.xlf:map.displayMap.info')}</p>
+<h4>{f:translate(key:'LLL:EXT:map/Resources/Private/Language/locallang_tca.xlf:map.doGeocoding')} (optional)</h4>
+<p class=&quot;t3-help-short&quot;>{f:translate(key:'LLL:EXT:map/Resources/Private/Language/locallang_tca.xlf:map.doGeocoding.info')}</p>
+<h4>{f:translate(key:'LLL:EXT:map/Resources/Private/Language/locallang_tca.xlf:map.fetchZoom')} (optional)</h4>
+<p class=&quot;t3-help-short&quot;>{f:translate(key:'LLL:EXT:map/Resources/Private/Language/locallang_tca.xlf:map.fetchZoom.info')}</p>">
+		<abbr class="btn btn-default" title="Help">Info</abbr>&nbsp;
+	</span>
+	</f:if>
+</f:section>
+
+<f:section name="optionDisplayMap">
+	<input type="button"
+		   onclick="displayMap()"
+		   id="tx_map_map_control_displaymap"
+		   value="{f:translate(key:'LLL:EXT:map/Resources/Private/Language/locallang_tca.xlf:map.displayMap')}"
+		   class="btn btn-default"/>
+	<input type="button"
+		   onclick="closeMap()"
+		   id="tx_map_map_control_closemap"
+		   value="{f:translate(key:'LLL:EXT:map/Resources/Private/Language/locallang_tca.xlf:map.closeMap')}"
+		   class="btn btn-default"
+		   style="display:none"/>
+</f:section>
+
+<f:comment><!-- Optional --></f:comment>
+
+<f:section name="optionDoGeocoding">
+	<input type="button"
+		   onclick="doGeocoding()"
+		   id="tx_map_map_control_dogeocoding"
+		   value="{f:translate(key:'LLL:EXT:map/Resources/Private/Language/locallang_tca.xlf:map.doGeocoding')}"
+		   class="btn btn-default"
+		   style="display:none"/>
+</f:section>
+
+<f:section name="optionFetchZoom">
+	<input type="button"
+		   onclick="fetchZoom()"
+		   id="tx_map_map_control_fetchzoom"
+		   value="{f:translate(key:'LLL:EXT:map/Resources/Private/Language/locallang_tca.xlf:map.fetchZoom')}"
+		   class="btn btn-default"
+		   style="display:none"/>
+</f:section>

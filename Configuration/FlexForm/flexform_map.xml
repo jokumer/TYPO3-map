@@ -1,0 +1,260 @@
+<T3DataStructure>
+	<meta type="array">
+		<langChildren>0</langChildren>
+		<langDisable>1</langDisable>
+	</meta>
+	<sheets>
+		<sheetGeneral>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:map/Resources/Private/Language/locallang_flexform_map.xlf:sheet.general</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.map.view.type>
+						<TCEforms>
+							<label>LLL:EXT:map/Resources/Private/Language/locallang_flexform_map.xlf:settings.map.view.type</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>select</type>
+								<maxitems>1</maxitems>
+								<minitems>1</minitems>
+								<size>1</size>
+								<renderType>selectSingle</renderType>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">
+											LLL:EXT:map/Resources/Private/Language/locallang_flexform_map.xlf:settings.map.view.type.map_and_menu
+										</numIndex>
+										<numIndex index="1">map_and_menu</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">
+											LLL:EXT:map/Resources/Private/Language/locallang_flexform_map.xlf:settings.map.view.type.map_only
+										</numIndex>
+										<numIndex index="1">map_only</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">
+											LLL:EXT:map/Resources/Private/Language/locallang_flexform_map.xlf:settings.map.view.type.menu_only
+										</numIndex>
+										<numIndex index="1">menu_only</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.map.view.type>
+					<settings.map.options.types>
+						<TCEforms>
+							<label>LLL:EXT:map/Resources/Private/Language/locallang_flexform_map.xlf:settings.map.options.types</label>
+							<displayCond>
+								<OR>
+									<numIndex index="0">FIELD:settings.map.view.type:=:map_and_menu</numIndex>
+									<numIndex index="1">FIELD:settings.map.view.type:=:map_only</numIndex>
+								</OR>
+							</displayCond>
+							<config>
+								<type>select</type>
+								<maxitems>4</maxitems>
+								<minitems>0</minitems>
+								<size>4</size>
+								<default>hybrid,satellite,roadmap</default>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">
+											LLL:EXT:map/Resources/Private/Language/locallang_flexform_map.xlf:settings.map.options.types.roadmap
+										</numIndex>
+										<numIndex index="1">roadmap</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">
+											LLL:EXT:map/Resources/Private/Language/locallang_flexform_map.xlf:settings.map.options.types.hybrid
+										</numIndex>
+										<numIndex index="1">hybrid</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">
+											LLL:EXT:map/Resources/Private/Language/locallang_flexform_map.xlf:settings.map.options.types.satellite
+										</numIndex>
+										<numIndex index="1">satellite</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">
+											LLL:EXT:map/Resources/Private/Language/locallang_flexform_map.xlf:settings.map.options.types.terrain
+										</numIndex>
+										<numIndex index="1">terrain</numIndex>
+									</numIndex>
+									<!-- For development purpose only
+									<numIndex index="4" type="array">
+										<numIndex index="0">LLL:EXT:map/Resources/Private/Language/locallang_flexform_map.xlf:settings.map.options.types.coordinate</numIndex>
+										<numIndex index="1">coordinate</numIndex>
+									</numIndex>
+									-->
+								</items>
+							</config>
+						</TCEforms>
+					</settings.map.options.types>
+					<settings.map.options.center.map>
+						<TCEforms>
+							<label>LLL:EXT:map/Resources/Private/Language/locallang_flexform_map.xlf:settings.map.options.center.map</label>
+							<displayCond>
+								<OR>
+									<numIndex index="0">FIELD:settings.map.view.type:=:map_and_menu</numIndex>
+									<numIndex index="1">FIELD:settings.map.view.type:=:map_only</numIndex>
+								</OR>
+							</displayCond>
+							<config>
+								<type>user</type>
+								<userFunc>Jokumer\Map\Utility\BackendMapUtility->renderMap</userFunc>
+								<parameters>
+									<entryDefaultLatitude>55.65</entryDefaultLatitude>
+									<entryDefaultLongitude>12.08</entryDefaultLongitude>
+									<entryFieldLatitude>pi_flexform/data/sheetGeneral/lDEF/settings.map.options.center.latitude/vDEF</entryFieldLatitude>
+									<entryFieldLongitude>pi_flexform/data/sheetGeneral/lDEF/settings.map.options.center.longitude/vDEF</entryFieldLongitude>
+									<entryFieldZoom>pi_flexform/data/sheetGeneral/lDEF/settings.map.options.zoom/vDEF</entryFieldZoom>
+									<mapDefaultZoom>7</mapDefaultZoom>
+									<mapOptions type="array">
+										<numIndex index="0">displayMap</numIndex>
+										<numIndex index="1">fetchZoom</numIndex>
+									</mapOptions>
+								</parameters>
+							</config>
+						</TCEforms>
+					</settings.map.options.center.map>
+					<settings.map.options.center.latitude>
+						<TCEforms>
+							<label>LLL:EXT:map/Resources/Private/Language/locallang_flexform_map.xlf:settings.map.options.center.latitude</label>
+							<displayCond>
+								<OR>
+									<numIndex index="0">FIELD:settings.map.view.type:=:map_and_menu</numIndex>
+									<numIndex index="1">FIELD:settings.map.view.type:=:map_only</numIndex>
+								</OR>
+							</displayCond>
+							<config>
+								<type>input</type>
+								<default>55.65</default>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</settings.map.options.center.latitude>
+					<settings.map.options.center.longitude>
+						<TCEforms>
+							<label>LLL:EXT:map/Resources/Private/Language/locallang_flexform_map.xlf:settings.map.options.center.longitude</label>
+							<displayCond>
+								<OR>
+									<numIndex index="0">FIELD:settings.map.view.type:=:map_and_menu</numIndex>
+									<numIndex index="1">FIELD:settings.map.view.type:=:map_only</numIndex>
+								</OR>
+							</displayCond>
+							<config>
+								<type>input</type>
+								<default>12.08</default>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</settings.map.options.center.longitude>
+					<settings.map.options.zoom>
+						<TCEforms>
+							<label>LLL:EXT:map/Resources/Private/Language/locallang_flexform_map.xlf:settings.map.options.zoom</label>
+							<displayCond>
+								<OR>
+									<numIndex index="0">FIELD:settings.map.view.type:=:map_and_menu</numIndex>
+									<numIndex index="1">FIELD:settings.map.view.type:=:map_only</numIndex>
+								</OR>
+							</displayCond>
+							<config>
+								<type>input</type>
+								<size>5</size>
+								<eval>trim,int</eval>
+								<range>
+									<lower>0</lower>
+									<upper>20</upper>
+								</range>
+								<default>5</default>
+								<wizards>
+									<angle>
+										<type>slider</type>
+										<step>1</step>
+										<width>200</width>
+									</angle>
+								</wizards>
+							</config>
+						</TCEforms>
+					</settings.map.options.zoom>
+					<settings.map.options.dimHeight>
+						<TCEforms>
+							<label>LLL:EXT:map/Resources/Private/Language/locallang_flexform_map.xlf:settings.map.options.dimHeight</label>
+							<displayCond>
+								<OR>
+									<numIndex index="0">FIELD:settings.map.view.type:=:map_and_menu</numIndex>
+									<numIndex index="1">FIELD:settings.map.view.type:=:map_only</numIndex>
+								</OR>
+							</displayCond>
+							<config>
+								<type>input</type>
+								<default>100vh</default>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</settings.map.options.dimHeight>
+					<settings.map.options.dimWidth>
+						<TCEforms>
+							<label>LLL:EXT:map/Resources/Private/Language/locallang_flexform_map.xlf:settings.map.options.dimWidth</label>
+							<displayCond>
+								<OR>
+									<numIndex index="0">FIELD:settings.map.view.type:=:map_and_menu</numIndex>
+									<numIndex index="1">FIELD:settings.map.view.type:=:map_only</numIndex>
+								</OR>
+							</displayCond>
+							<config>
+								<type>input</type>
+								<default></default>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</settings.map.options.dimWidth>
+				</el>
+			</ROOT>
+		</sheetGeneral>
+		<sheetCategories>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:map/Resources/Private/Language/locallang_flexform_map.xlf:sheet.categories</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.map.overlays.categories.available>
+						<TCEforms>
+							<label>LLL:EXT:map/Resources/Private/Language/locallang_flexform_map.xlf:settings.map.overlays.categories.available</label>
+							<config>
+								<type>select</type>
+								<maxitems>99</maxitems>
+								<minitems>0</minitems>
+								<size>4</size>
+								<renderType>selectMultipleSideBySide</renderType>
+								<enableMultiSelectFilterTextfield>1</enableMultiSelectFilterTextfield>
+								<foreign_table>tx_map_category</foreign_table>
+								<foreign_table_where>AND sys_language_uid IN (-1,0) ORDER BY tx_map_category.crdate DESC</foreign_table_where>
+							</config>
+						</TCEforms>
+					</settings.map.overlays.categories.available>
+					<settings.map.overlays.categories.active>
+						<TCEforms>
+							<label>LLL:EXT:map/Resources/Private/Language/locallang_flexform_map.xlf:settings.map.overlays.categories.active</label>
+							<config>
+								<type>select</type>
+								<maxitems>99</maxitems>
+								<minitems>0</minitems>
+								<size>4</size>
+								<renderType>selectMultipleSideBySide</renderType>
+								<enableMultiSelectFilterTextfield>1</enableMultiSelectFilterTextfield>
+								<foreign_table>tx_map_category</foreign_table>
+								<foreign_table_where> AND tx_map_category.sys_language_uid IN (-1,0) ORDER BY tx_map_category.crdate DESC</foreign_table_where>
+							</config>
+						</TCEforms>
+					</settings.map.overlays.categories.active>
+				</el>
+			</ROOT>
+		</sheetCategories>
+	</sheets>
+</T3DataStructure>

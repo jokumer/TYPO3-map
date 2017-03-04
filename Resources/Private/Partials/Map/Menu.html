@@ -1,0 +1,29 @@
+<f:if condition="{categories}">
+	<div class="tx-map-menu">
+		<f:form action=""
+				pageType="{settings.map.overlays.request.uri.pageTypeNum}"
+				name="tx_map_map_menu"
+				id="tx_map_map_menu">
+			<fieldset>
+				<ul>
+					<f:for each="{categories}" as="category">
+						<li>
+							<f:form.checkbox checked="{category.isActive}==1"
+											 id="tx_map_map_menu_category_{category.uid}"
+											 name="categories[]"
+											 value="{category.uid}"
+											 onclick="txmap.googleMap.refreshMapOverlays(); "/>
+							<label for="tx_map_map_menu_category_{category.uid}">
+								<f:if condition="{category.icon}">
+									<f:image image="{category.icon}" alt="{category.description}" width="30"
+											 height="30"/>
+								</f:if>
+								{category.title}
+							</label>
+						</li>
+					</f:for>
+				</ul>
+			</fieldset>
+		</f:form>
+	</div>
+</f:if>

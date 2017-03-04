@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-08-23T11:49:21Z" product-name="map" target-language="da">
+		<header/>
+		<body>
+			<trans-unit id="settings.map.options.center">
+				<source>Center</source>
+				<target>Center</target>
+			</trans-unit>
+			<trans-unit id="settings.map.options.center.map">
+				<source>Center - map</source>
+				<target>Center - kort</target>
+			</trans-unit>
+			<trans-unit id="settings.map.options.center.latitude">
+				<source>Center - latitude</source>
+				<target>Center - breddegrad</target>
+			</trans-unit>
+			<trans-unit id="settings.map.options.center.longitude">
+				<source>Center - longitude</source>
+				<target>Center - længdegrad</target>
+			</trans-unit>
+			<trans-unit id="settings.map.options.dimHeight">
+				<source>Height (%,px,vh,..)</source>
+				<target>Højde (%,px,vh,..)</target>
+			</trans-unit>
+			<trans-unit id="settings.map.options.dimWidth">
+				<source>Width (%,px,vh,..)</source>
+				<target>Brede (%,px,vh,..)</target>
+			</trans-unit>
+			<trans-unit id="settings.map.options.types">
+				<source>Type</source>
+				<target>Type</target>
+			</trans-unit>
+			<trans-unit id="settings.map.options.types.coordinate">
+				<source>Coordinate (development)</source>
+				<target>Koordinat (udvikling)</target>
+			</trans-unit>
+			<trans-unit id="settings.map.options.types.hybrid">
+				<source>Hybrid (mix of roadmap and satellite)</source>
+				<target>Hybrid (Vejkort og satellit blandet)</target>
+			</trans-unit>
+			<trans-unit id="settings.map.options.types.roadmap">
+				<source>Roadmap (road map view)</source>
+				<target>Vejkort (vejkort-visning)</target>
+			</trans-unit>
+			<trans-unit id="settings.map.options.types.satellite">
+				<source>Satellite (Google Earth satellite)</source>
+				<target>Satellit (Google Earth satellit)</target>
+			</trans-unit>
+			<trans-unit id="settings.map.options.types.terrain">
+				<source>Terrain (physical map based on terrain)</source>
+				<target>Terræn (fysisk kort baseret på terræn)</target>
+			</trans-unit>
+			<trans-unit id="settings.map.options.zoom">
+				<source>Zoom</source>
+				<target>Zoom</target>
+			</trans-unit>
+			<trans-unit id="settings.map.overlays.categories.active">
+				<source>Categories - active</source>
+				<target>Kategorier - aktiv</target>
+			</trans-unit>
+			<trans-unit id="settings.map.overlays.categories.available">
+				<source>Categories - available</source>
+				<target>Kategorier - tilgængelig</target>
+			</trans-unit>
+			<trans-unit id="settings.map.view.type">
+				<source>View type</source>
+				<target>Visningstype</target>
+			</trans-unit>
+			<trans-unit id="settings.map.view.type.map_and_menu">
+				<source>Map and menu</source>
+				<target>Kort og menu</target>
+			</trans-unit>
+			<trans-unit id="settings.map.view.type.map_only">
+				<source>Map only</source>
+				<target>Kun kort</target>
+			</trans-unit>
+			<trans-unit id="settings.map.view.type.menu_only">
+				<source>Menu only</source>
+				<target>Kun menu</target>
+			</trans-unit>
+			<trans-unit id="sheet.categories">
+				<source>Categories</source>
+				<target>Kategorier</target>
+			</trans-unit>
+			<trans-unit id="sheet.general">
+				<source>General</source>
+				<target>Generelt</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

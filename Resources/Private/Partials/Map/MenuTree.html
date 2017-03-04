@@ -1,0 +1,57 @@
+<f:if condition="{categories}">
+	<div class="tx-map-menu">
+		<f:form action=""
+				pageType="{settings.map.overlays.request.uri.pageTypeNum}"
+				name="tx_map_map_menu"
+				id="tx_map_map_menu">
+			<fieldset>
+				<ul class="level1">
+					<f:groupedFor
+							each="{categories}"
+							as="level2Categories" groupBy="parent" groupKey="level1Category">
+						<f:if condition="{level1Category}">
+							<li>
+								<f:form.checkbox checked="{level1Category.isActive}==1"
+												 id="tx_map_map_menu_category_{level1Category.uid}"
+												 name="categories[]"
+												 value="{level1Category.uid}"
+												 onclick="txmap.googleMap.refreshMapOverlays(); "/>
+								<label for="tx_map_map_menu_category_{level1Category.uid}">
+									<f:if condition="{level1Category.icon}">
+										<f:image image="{level1Category.icon}"
+												 alt="{category.description}"
+												 width="30"
+												 height="30"/>
+									</f:if>
+									{level1Category.title}
+								</label>
+								<f:if condition="{level2Categories}">
+									<ul class="level2">
+										<f:for each="{level2Categories}" as="level2Category">
+											<li>
+												<f:form.checkbox checked="{level2Category.isActive}==1"
+																 id="tx_map_map_menu_category_{level2Category.uid}"
+																 name="categories[]"
+																 value="{level2Category.uid}"
+																 onclick="txmap.googleMap.refreshMapOverlays(); "/>
+												<label for="tx_map_map_menu_category_{level2Category.uid}">
+													<f:if condition="{level2Category.icon}">
+														<f:image image="{level2Category.icon}"
+																 alt="{category.description}"
+																 width="30"
+																 height="30"/>
+													</f:if>
+													{level2Category.title}
+												</label>
+											</li>
+										</f:for>
+									</ul>
+								</f:if>
+							</li>
+						</f:if>
+					</f:groupedFor>
+				</ul>
+			</fieldset>
+		</f:form>
+	</div>
+</f:if>

@@ -1,0 +1,29 @@
+<div id="infowwindow-{location.uid}"
+	 class="tx-map-infowindow infowindow-location"
+	 style="width:{settings.map.overlays.infowindow.width}; height:{settings.map.overlays.infowindow.height};">
+	<h5>
+		<f:if condition="{location.category.icon}">
+			<f:image image="{location.category.icon}"
+					 width="{settings.map.overlays.infowindow.icon.width}"
+					 height="{settings.map.overlays.infowindow.icon.heigth}"
+					 style="vertical-align: middle"
+					 title="location uid:{location.uid}"
+					 alt="icon"/>
+		</f:if>
+		{location.title}
+	</h5>
+	<f:if condition="{location.address}">
+		<p>
+			<em>{location.address}, {location.zip}&nbsp;{location.city}</em>
+		</p>
+	</f:if>
+	<f:if condition="{location.description}">
+		<p>
+			<f:format.crop maxCharacters="{settings.map.overlays.infowindow.cropMaxCharacters}" append="&hellip;">
+				<f:format.stripTags>
+					{location.description}
+				</f:format.stripTags>
+			</f:format.crop>
+		</p>
+	</f:if>
+</div>

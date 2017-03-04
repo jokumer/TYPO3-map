@@ -1,0 +1,1 @@
+.tx-map-loadOver{position:absolute;top:50%;left:50%;width:50px;height:50px;margin-top:-20px;margin-left:-20px;overflow:hidden;z-index:9999}.tx-map-loadOverDiv{position:absolute;top:0;left:0;width:50px;height:50px;background-image:url(../Images/loader.gif);background-repeat:no-repeat}.tx-map-loadOverOverlay{z-index:9999;display:none;background-color:#fff;opacity:.7;cursor:wait}

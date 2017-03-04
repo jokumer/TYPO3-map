@@ -1,0 +1,26 @@
+<h3>Models (Debug mode)</h3>
+<ul>
+	<li><f:link.action controller="Map" arguments="{debug:1}">Map</f:link.action></li>
+	<ul>
+		<li>
+			<f:link.action controller="Map"
+						   action="overlay"
+						   pageType="1472420000"
+						   target="_blank"
+						   arguments="{overlay:'default', categories:'{settings.map.overlays.categories.active}', debug:1}">
+				Overlays (default active)
+			</f:link.action>
+		</li>
+		<li>
+			<f:link.action controller="Map"
+						   action="overlay"
+						   pageType="1472420000"
+						   target="_blank"
+						   arguments="{overlay:'default', categories:'{settings.map.overlays.categories.available}', debug:1}">
+				Overlays (default available)
+			</f:link.action>
+		</li>
+	</ul>
+	<li><f:link.action controller="Category" arguments="{debug:1}">Category</f:link.action></li>
+	<li><f:link.action controller="Location" arguments="{debug:1}">Location</f:link.action></li>
+</ul>

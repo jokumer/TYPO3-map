@@ -1,0 +1,43 @@
+<dl>
+	</f:if>
+	<f:if condition="{category.description}">
+		<dt>
+			<f:translate key="tx_map_category.description"/>
+		</dt>
+		<dd>
+			{category.description}
+		</dd>
+	</f:if>
+	<f:if condition="{category.icon}">
+		<dt>
+			<f:translate key="tx_map_category.icon"/>
+		</dt>
+		<dd>
+			<f:image image="{category.icon}"/>
+		</dd>
+	</f:if>
+	<f:if condition="{category.parent}">
+		<dt>
+			<f:translate key="tx_map_category.parent"/>
+		</dt>
+		<dd>
+			{category.parent.title}
+		</dd>
+	</f:if>
+	<f:if condition="{category.title}">
+		<dt>
+			<f:translate key="tx_map_category.title"/>
+		</dt>
+		<dd>
+			{category.title}
+		</dd>
+	</f:if>
+	<f:if condition="{category.title_language_overlay}">
+		<dt>
+			<f:translate key="tx_map_category.title_language_overlay"/>
+		</dt>
+		<dd>
+			{category.title_language_overlay}
+		</dd>
+	</f:if>
+</dl>

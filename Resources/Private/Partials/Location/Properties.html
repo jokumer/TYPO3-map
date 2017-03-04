@@ -1,0 +1,99 @@
+<dl>
+	<f:if condition="{location.address}">
+		<dt>
+			<f:translate key="tx_map_location.address"/>
+		</dt>
+		<dd>
+			{location.address}
+		</dd>
+	</f:if>
+	<f:if condition="{location.category}">
+		<dt>
+			<f:translate key="tx_map_location.category"/>
+		</dt>
+		<dd>
+			{location.category.title}
+		</dd>
+	</f:if>
+	<f:if condition="{location.city}">
+		<dt>
+			<f:translate key="tx_map_location.city"/>
+		</dt>
+		<dd>
+			{location.city}
+		</dd>
+	</f:if>
+	<f:if condition="{location.country}">
+		<dt>
+			<f:translate key="tx_map_location.country"/>
+		</dt>
+		<dd>
+			{location.country}
+		</dd>
+	</f:if>
+	<f:if condition="{location.description}">
+		<dt>
+			<f:translate key="tx_map_location.description"/>
+		</dt>
+		<dd>
+			{location.description}
+		</dd>
+	</f:if>
+	<f:if condition="{location.latitude}">
+		<dt>
+			<f:translate key="tx_map_location.latitude"/>
+		</dt>
+		<dd>
+			{location.latitude}
+		</dd>
+	</f:if>
+	<f:if condition="{location.longitude}">
+		<dt>
+			<f:translate key="tx_map_location.longitude"/>
+		</dt>
+		<dd>
+			{location.longitude}
+		</dd>
+	</f:if>
+	<f:if condition="{location.title}">
+		<dt>
+			<f:translate key="tx_map_location.title"/>
+		</dt>
+		<dd>
+			{location.title}
+		</dd>
+	</f:if>
+	<f:if condition="{location.zip}">
+		<dt>
+			<f:translate key="tx_map_location.zip"/>
+		</dt>
+		<dd>
+			{location.zip}
+		</dd>
+	</f:if>
+	<f:if condition="{location.relatedContent}">
+		<dt>
+			<f:translate key="tx_map_location.related_content"/>
+		</dt>
+		<dd>
+			
+			<f:cObject typoscriptObjectPath="lib.tx_map.render.relatedContent">
+				{location.relatedContentIdList}
+			</f:cObject>
+		</dd>
+	</f:if>
+</dl>
+<f:if condition="{settings.general.debug}">
+	<h3>Test (Debug mode)</h3>
+	<ul>
+		<li>
+			<f:link.action pageType="1472420000"
+						   action="overlay"
+						   controller="Map"
+						   arguments="{overlay:'infowindow', identifier:'Location:{location.uid}'}"
+						   noCache="1">
+				Infowindow
+			</f:link.action>
+		</li>
+	</ul>
+</f:if>

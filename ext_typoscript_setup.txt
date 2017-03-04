@@ -1,0 +1,21 @@
+config.tx_extbase {
+    persistence {
+        classes {
+            Jokumer\Map\Domain\Model\Category.mapping.tableName = tx_map_category
+            Jokumer\Map\Domain\Model\ContentReference.mapping.tableName = tx_map_content_reference
+            Jokumer\Map\Domain\Model\Location.mapping.tableName = tx_map_location
+            Jokumer\Map\Domain\Model\Overlay\Marker\Location.mapping.tableName = tx_map_location
+            Jokumer\Map\Domain\Model\TtContent {
+                mapping {
+                    tableName = tt_content
+                    columns {
+                        altText.mapOnProperty = altText
+                        titleText.mapOnProperty = titleText
+                        colPos.mapOnProperty = colPos
+                        CType.mapOnProperty = CType
+                    }
+                }
+            }
+        }
+    }
+}

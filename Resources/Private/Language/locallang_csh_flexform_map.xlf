@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-08-23T11:49:21Z" product-name="map">
+		<header/>
+		<body>
+			<trans-unit id="settings.map.options.center.description">
+				<source>Center description</source>
+			</trans-unit>
+			<trans-unit id="settings.map.options.center.map.description">
+				<source>Center - map description</source>
+			</trans-unit>
+			<trans-unit id="settings.map.options.center.latitude.description">
+				<source>Center - latitude description</source>
+			</trans-unit>
+			<trans-unit id="settings.map.options.center.longitude.description">
+				<source>Center - longitude description</source>
+			</trans-unit>
+			<trans-unit id="settings.map.options.height.description">
+				<source>Height description</source>
+			</trans-unit>
+			<trans-unit id="settings.map.options.types.description">
+				<source>Types description</source>
+			</trans-unit>
+			<trans-unit id="settings.map.options.zoom.description">
+				<source>Zoom description</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
