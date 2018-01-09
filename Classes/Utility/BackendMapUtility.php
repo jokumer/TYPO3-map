@@ -25,7 +25,7 @@ class BackendMapUtility
      * https://developers.google.com/maps/documentation/geocoding
      * Needs Geocode API key from Google https://developers.google.com/maps/documentation/geocoding/get-api-key
      * Uses GMap javascript from Christian Brinkert <christian.brinkert@googlemail.com>
-     * 
+     *
      * @param array $fieldConfiguration Array (passed by reference) which contains the current information about the current field being rendered
      * @param \TYPO3\CMS\Backend\Form\FormEngine $parentFormObject Reference to the parent object (an instance of the TYPO3\CMS\Backend\Form\FormEngine class)
      * @return string
@@ -38,12 +38,12 @@ class BackendMapUtility
 
     /**
      * Get default settings
-     * 
+     *
      * @param array $config
      * @return array
      */
     private function getDefaultSettings($fieldConfiguration) {
-        $extRelPath = ExtensionManagementUtility::extRelPath('map');
+        $extRelPath = ExtensionManagementUtility::extPath('map');
         $geocodeJSFile = $extRelPath . 'Resources/Public/JavaScript/Backend/txmap.min.js';
         $extConf = GeneralUtility::makeInstance(ExtConf::class);
         $googleMapsApiKey = $extConf->getGoogleMapsApiKey();
