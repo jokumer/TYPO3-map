@@ -13,11 +13,11 @@
 			</trans-unit>
 			<trans-unit id="pi.geolocate.error.geolocation">
 				<source>Error: The geolocation service failed.</source>
-				<target>Fejl: Geolocation service mislykkede.</target>
+				<target>Fejl: Geolocation ikke mulig.</target>
 			</trans-unit>
 			<trans-unit id="pi.geolocate.error.geolocation.watch">
 				<source>Error: The geolocation watch position failed.</source>
-				<target>Fejl: Geolocation position tracking mislykkede.</target>
+				<target>Fejl: Geolocation positionssporing mislykkedes.</target>
 			</trans-unit>
 			<trans-unit id="pi.map.geolocate.myPosition.title">
 				<source>My position</source>

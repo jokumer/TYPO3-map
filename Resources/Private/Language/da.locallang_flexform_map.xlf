@@ -25,7 +25,7 @@
 			</trans-unit>
 			<trans-unit id="settings.map.options.dimWidth">
 				<source>Width (%,px,vh,..)</source>
-				<target>Brede (%,px,vh,..)</target>
+				<target>Bredde (%,px,vh,..)</target>
 			</trans-unit>
 			<trans-unit id="settings.map.options.types">
 				<source>Type</source>

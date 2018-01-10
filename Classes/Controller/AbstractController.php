@@ -56,7 +56,7 @@ abstract class AbstractController extends ActionController
      * @var LocationRepository|null
      */
     protected $locationRepository = null;
-    
+
     /**
      * Inject categoryRepository
      *
@@ -136,12 +136,15 @@ abstract class AbstractController extends ActionController
      *
      * @return void
      */
+     #$pageRender = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Page\PageRenderer::class);
+     #$pageRender->addJsFooterFile($jsFile, 'text/javascript', true, false, '', true);
     protected function includeJs() {
         // Include default JS
         if (isset($this->settings['general']['includeJs']['tx_map']['enableDefault'])
             && $this->settings['general']['includeJs']['tx_map']['enableDefault'] == 1
         ) {
-            $GLOBALS['TSFE']->getPageRenderer()->addJsFooterFile(
+          $pageRender = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Page\PageRenderer::class);
+          $pageRender->addJsFooterFile(
                 ExtensionManagementUtility::siteRelPath('map') . 'Resources/Public/JavaScript/Frontend/txmap.min.js',
                 'text/javascript',
                 false,
@@ -159,7 +162,8 @@ abstract class AbstractController extends ActionController
         ) {
             $extConf = GeneralUtility::makeInstance(ExtConf::class);
             $googleMapsApiKey = $extConf->getGoogleMapsApiKey();
-            $GLOBALS['TSFE']->getPageRenderer()->addJsFooterFile(
+            $pageRender = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Page\PageRenderer::class);
+            $pageRender->addJsFooterFile(
                 'https://maps.googleapis.com/maps/api/js?key=' . $googleMapsApiKey . '&libraries=geometry&callback=initializeGoogleMap',
                 'text/javascript',
                 false,

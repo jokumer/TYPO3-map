@@ -10,8 +10,7 @@ return [
         'cruser_id' => 'cruser_id',
         'default_sortby' => 'ORDER BY crdate DESC',
         'dividers2tabs' => true,
-        'versioningWS' => 2,
-        'versioning_followPages' => true,
+        'versioningWS' => true,
         'languageField' => 'sys_language_uid',
         'thumbnail' => 'icon',
         'transOrigPointerField' => 'l10n_parent',
@@ -23,7 +22,7 @@ return [
             'endtime' => 'endtime',
         ],
         'searchFields' => 'description,title,title_language_overlay,',
-        'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('map') . 'Resources/Public/Icons/Backend/Model/category.svg',
+        'iconfile' => 'EXT:map/Resources/Public/Icons/Backend/Model/category.svg',
     ],
     'interface' => [
         'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, description, icon, parent, pidy, title, title_language_overlay',
@@ -96,8 +95,7 @@ return [
             'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
             'config' => [
                 'type' => 'input',
-                'size' => 13,
-                'max' => 20,
+                'renderType' => 'inputDateTime',
                 'eval' => 'datetime',
                 'checkbox' => 0,
                 'default' => 0,
@@ -113,8 +111,8 @@ return [
             'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
             'config' => [
                 'type' => 'input',
+                'renderType' => 'inputDateTime',
                 'size' => 13,
-                'max' => 20,
                 'eval' => 'datetime',
                 'checkbox' => 0,
                 'default' => 0,
