@@ -136,8 +136,6 @@ abstract class AbstractController extends ActionController
      *
      * @return void
      */
-     #$pageRender = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Page\PageRenderer::class);
-     #$pageRender->addJsFooterFile($jsFile, 'text/javascript', true, false, '', true);
     protected function includeJs() {
         // Include default JS
         if (isset($this->settings['general']['includeJs']['tx_map']['enableDefault'])

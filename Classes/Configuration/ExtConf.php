@@ -49,7 +49,7 @@ class ExtConf implements SingletonInterface
      */
     public function getGoogleMapsApiKey()
     {
-      return $this->googleMapsApiKey;
+        return $this->googleMapsApiKey;
     }
 
     /**
