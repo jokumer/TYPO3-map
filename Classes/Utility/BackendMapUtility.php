@@ -43,7 +43,7 @@ class BackendMapUtility
      * @return array
      */
     private function getDefaultSettings($fieldConfiguration) {
-        $extRelPath = ExtensionManagementUtility::extPath('map');
+        $extRelPath = ExtensionManagementUtility::extRelPath('map');
         $geocodeJSFile = $extRelPath . 'Resources/Public/JavaScript/Backend/txmap.min.js';
         $extConf = GeneralUtility::makeInstance(ExtConf::class);
         $googleMapsApiKey = $extConf->getGoogleMapsApiKey();
