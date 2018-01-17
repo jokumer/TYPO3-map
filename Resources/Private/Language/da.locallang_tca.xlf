@@ -48,16 +48,16 @@
 				<target>Kort</target>
 			</trans-unit>
 			<trans-unit id="plugin.category.title">
-				<source>Categories</source>
-				<target>Kategorier</target>
+				<source>Google Maps categories</source>
+				<target>Google Maps kategorier</target>
 			</trans-unit>
 			<trans-unit id="plugin.location.title">
-				<source>Locations</source>
-				<target>Steder</target>
+				<source>Google Maps list</source>
+				<target>Google Maps liste</target>
 			</trans-unit>
 			<trans-unit id="plugin.map.title">
-				<source>Google Maps</source>
-				<target>Google Maps</target>
+				<source>Google Maps map</source>
+				<target>Google Maps kort</target>
 			</trans-unit>
 			<trans-unit id="tabs.related">
 				<source>Related</source>
