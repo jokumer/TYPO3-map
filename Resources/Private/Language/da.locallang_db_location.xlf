@@ -37,7 +37,7 @@
 			</trans-unit>
 			<trans-unit id="tx_map_location.related_content">
 				<source>Related content</source>
-				<target>Relatered indhold</target>
+				<target>Relateret indhold</target>
 			</trans-unit>
 			<trans-unit id="tx_map_location.title">
 				<source>Title</source>

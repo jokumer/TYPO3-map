@@ -41,7 +41,7 @@
 			</trans-unit>
 			<trans-unit id="tx_map_category.parent">
 				<source>Parent</source>
-				<target>Overordnede</target>
+				<target>Overordnet</target>
 			</trans-unit>
 			<trans-unit id="tx_map_category.title">
 				<source>Title</source>
