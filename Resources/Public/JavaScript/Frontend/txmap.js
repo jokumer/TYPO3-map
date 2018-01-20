@@ -496,10 +496,10 @@ var txmap  = (function() {
                         )
                             .done(function(data) {
                                 $(geolocateItem).loadOverlayStop();
-                                if (data.geoLocation && data.nearestLocation){
+                                if (data.geoLocation && data.nearestLocation) {
                                     var geoLocation = new google.maps.LatLng (data.geoLocation.latitude, data.geoLocation.longitude);
                                     var geoLocationMapMarkerIcon = txmap.googleMap.getIcon(geolocateSetupPositionMarkerIconPath);
-                                    geolocationMapMarker = new google.maps.Marker({
+                                    var geolocationMapMarker = new google.maps.Marker({
                                         map: txmap.googleMap.map,
                                         position: geoLocation,
                                         icon: geoLocationMapMarkerIcon,
