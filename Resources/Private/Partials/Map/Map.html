@@ -3,57 +3,67 @@
 		identifier-setup-item-latitude:'tx_map_map_geolocate_latitude',
 		identifier-setup-item-longitude:'tx_map_map_geolocate_longitude'
 	}">
-	<div id="{identifier-item}"
-		 class="tx-map-map"
-		 style="{f:if(
-		 	condition:'{settings.map.options.dimHeight}',
-		 	then:'height:{settings.map.options.dimHeight};',
-		 	else:'height:100vh;')} {f:if(
-		 	condition:'{settings.map.options.dimWidth}',
-		 	then:'width:{settings.map.options.dimWidth};',
-		 	else:'')}"
-		 data-options-center="{settings.map.options.center.latitude},{settings.map.options.center.longitude}"
-		 data-options-scroll="{settings.map.options.scroll}"
-		 data-options-types="{settings.map.options.types}"
-		 data-options-zoom="{settings.map.options.zoom}"></div>
+	<div
+			id="{identifier-item}"
+			class="tx-map-map"
+			style="{f:if(
+				condition:'{settings.map.options.dimHeight}',
+				then:'height:{settings.map.options.dimHeight};',
+				else:'height:100vh;')} {f:if(
+				condition:'{settings.map.options.dimWidth}',
+				then:'width:{settings.map.options.dimWidth};',
+				else:'')}"
+			data-options-center="{settings.map.options.center.latitude},{settings.map.options.center.longitude}"
+			data-options-scroll="{settings.map.options.scroll}"
+			data-options-types="{settings.map.options.types}"
+			data-options-zoom="{settings.map.options.zoom}"></div>
 	<f:if condition="{categories}">
 		<!-- Overlays -->
-		<f:form action=""
+		<f:form
+				action=""
 				pageType="{settings.map.overlays.request.uri.pageTypeNum}"
 				name="tx_map_map_setup"
 				id="tx_map_map_setup"
 				style="display:none">
 			<f:form.hidden name="overlay" value="default"/>
 			<f:for each="{categories}" as="category">
-				<f:form.checkbox checked="{category.isActive}==1"
-								 id="tx_map_map_setup_category_{category.uid}"
-								 name="categories[]"
-								 value="{category.uid}"/>
+				<f:form.checkbox
+						checked="{category.isActive}==1"
+						id="tx_map_map_setup_category_{category.uid}"
+						name="categories[]"
+						value="{category.uid}"/>
 			</f:for>
 		</f:form>
 	</f:if>
 	<f:if condition="{settings.map.options.geolocate.enabled}">
 		<!-- Geolocate -->
-		<f:form action="geolocate"
+		<f:form
+				action="geolocate"
 				pluginName="Geolocate"
 				pageType="{settings.general.geolocate.request.uri.pageTypeNum}"
 				name="tx_map_map_geolocate_setup"
 				id="tx_map_map_geolocate_setup"
 				style="display:none"
 				additionalAttributes="{
-					data-geolocate-item:'{identifier-item}'
-					data-geolocate-setup-name:'map'
-					data-geolocate-setup-item-latitude:'{identifier-setup-item-latitude}'
-					data-geolocate-setup-item-longitude:'{identifier-setup-item-longitude}'
-					data-geolocate-setup-position-marker-icon-path:'{settings.map.options.geolocate.positionMarkerIconPath}'
-					data-geolocate-setup-position-track:'{f:if(condition:\'{settings.map.options.geolocate.positionTrack}\', then:\'1\', else:\'0\')}'
-					data-geolocate-setup-text-marker-title:'{f:translate(key:\'pi.map.geolocate.myPosition.title\')}'
-					data-geolocate-setup-text-error-browser:'{f:translate(key:\'pi.geolocate.error.browser\')}'
-					data-geolocate-setup-text-error-geolocation:'{f:translate(key:\'pi.geolocate.error.geolocation\')}'
+					data-geolocate-item:'{identifier-item}',
+					data-geolocate-setup-name:'map',
+					data-geolocate-setup-item-latitude:'{identifier-setup-item-latitude}',
+					data-geolocate-setup-item-longitude:'{identifier-setup-item-longitude}',
+					data-geolocate-setup-position-marker-icon-path:'{settings.map.options.geolocate.positionMarkerIconPath}',
+					data-geolocate-setup-position-track:'{f:if(condition:\'{settings.map.options.geolocate.positionTrack}\', then:\'1\', else:\'0\')}',
+					data-geolocate-setup-text-marker-title:'{f:translate(key:\'pi.map.geolocate.myPosition.title\')}',
+					data-geolocate-setup-text-error-browser:'{f:translate(key:\'pi.geolocate.error.browser\')}',
+					data-geolocate-setup-text-error-geolocation:'{f:translate(key:\'pi.geolocate.error.geolocation\')}',
 					data-geolocate-setup-text-error-geolocation-watch:'{f:translate(key:\'pi.geolocate.error.geolocation.watch\')}'
 				}">
-			<f:form.hidden name="geolocate[latitude]" id="{identifier-setup-item-latitude}" value="{settings.general.geolocate.default.latitude}"/>
-			<f:form.hidden name="geolocate[longitude]" id="{identifier-setup-item-longitude}" value="{settings.general.geolocate.default.longitude}"/>
+			<f:form.hidden
+					name="geolocate[latitude]"
+					id="{identifier-setup-item-latitude}"
+					value="{settings.general.geolocate.default.latitude}"/>
+			<f:form.hidden
+					name="geolocate[longitude]"
+					id="{identifier-setup-item-longitude}"
+					value="{settings.general.geolocate.default.longitude}"/>
 		</f:form>
 	</f:if>
 </f:alias>
