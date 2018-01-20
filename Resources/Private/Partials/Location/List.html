@@ -7,9 +7,10 @@
 		<f:if condition="{locations}">
 			<f:if condition="{f:count(subject:'{locations}')} > 10">
 				<f:then>
-					<f:widget.paginate objects="{locations}"
-									   as="results"
-									   configuration="{itemsPerPage: 10, insertAbove: 0 insertBelow: 1}">
+					<f:widget.paginate
+							objects="{locations}"
+							as="results"
+							configuration="{itemsPerPage: 10, insertAbove: 0 insertBelow: 1}">
 						<f:render section="locationList" arguments="{_all}"/>
 					</f:widget.paginate>
 				</f:then>
@@ -22,28 +23,31 @@
 			
 			<f:if condition="{settings.location.options.geolocate.enabled}">
 				<!-- Geolocate -->
-				<f:form action="listGeolocate"
+				<f:form
+						action="listGeolocate"
 						pluginName="Geolocate"
 						pageType="{settings.general.geolocate.request.uri.pageTypeNum}"
 						name="tx_map_location_geolocate_setup"
 						id="tx_map_location_geolocate_setup"
 						style="display:none"
 						additionalAttributes="{
-								data-geolocate-item:'{identifier-item}'
-								data-geolocate-setup-name:'location_list'
-								data-geolocate-setup-item-latitude:'{identifier-setup-item-latitude}'
-								data-geolocate-setup-item-longitude:'{identifier-setup-item-longitude}'
-								data-geolocate-setup-position-track:'{f:if(condition:\'{settings.location.options.geolocate.positionTrack}\', then:\'1\', else:\'0\')}'
-								data-geolocate-setup-text-error-browser:'{f:translate(key:\'pi.geolocate.error.browser\')}'
-								data-geolocate-setup-text-error-geolocation:'{f:translate(key:\'pi.geolocate.error.geolocation\')}'
-								data-geolocate-setup-text-error-geolocation-watch:'{f:translate(key:\'pi.geolocate.error.geolocation.watch\')}'
-							}">
-					<f:form.hidden name="geolocate[latitude]"
-								   id="{identifier-setup-item-latitude}"
-								   value="{settings.general.geolocate.default.latitude}"/>
-					<f:form.hidden name="geolocate[longitude]"
-								   id="{identifier-setup-item-longitude}"
-								   value="{settings.general.geolocate.default.longitude}"/>
+							data-geolocate-item:'{identifier-item}',
+							data-geolocate-setup-name:'location_list',
+							data-geolocate-setup-item-latitude:'{identifier-setup-item-latitude}',
+							data-geolocate-setup-item-longitude:'{identifier-setup-item-longitude}',
+							data-geolocate-setup-position-track:'{f:if(condition:\'{settings.location.options.geolocate.positionTrack}\', then:\'1\', else:\'0\')}',
+							data-geolocate-setup-text-error-browser:'{f:translate(key:\'pi.geolocate.error.browser\')}',
+							data-geolocate-setup-text-error-geolocation:'{f:translate(key:\'pi.geolocate.error.geolocation\')}',
+							data-geolocate-setup-text-error-geolocation-watch:'{f:translate(key:\'pi.geolocate.error.geolocation.watch\')}'
+						}">
+					<f:form.hidden
+							name="geolocate[latitude]"
+							id="{identifier-setup-item-latitude}"
+							value="{settings.general.geolocate.default.latitude}"/>
+					<f:form.hidden
+							name="geolocate[longitude]"
+							id="{identifier-setup-item-longitude}"
+							value="{settings.general.geolocate.default.longitude}"/>
 				</f:form>
 			</f:if>
 		</f:if>
@@ -57,15 +61,17 @@
 				<f:for each="{results}" as="location">
 					<li>
 						<h3>
-							<f:link.action action="show"
-										   arguments="{location:location, debug:settings.general.debug}"
-										   title="{location.latitude}, {location.longitude}">
+							<f:link.action
+									action="show"
+									arguments="{location:location, debug:settings.general.debug}"
+									title="{location.latitude}, {location.longitude}">
 								{location.title}
 							</f:link.action>
 						</h3>
 						<p>
-							<f:format.crop maxCharacters="50"
-										   append="&hellip;">{location.description}</f:format.crop>
+							<f:format.crop
+									maxCharacters="50"
+									append="&hellip;">{location.description}</f:format.crop>
 						</p>
 					</li>
 				</f:for>
