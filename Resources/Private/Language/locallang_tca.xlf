@@ -37,13 +37,13 @@
 				<source>Map</source>
 			</trans-unit>
 			<trans-unit id="plugin.category.title">
-				<source>Categories</source>
+				<source>Google Maps categories</source>
 			</trans-unit>
 			<trans-unit id="plugin.location.title">
-				<source>Locations</source>
+				<source>Google Maps list</source>
 			</trans-unit>
 			<trans-unit id="plugin.map.title">
-				<source>Google Maps</source>
+				<source>Google Maps map</source>
 			</trans-unit>
 			<trans-unit id="tabs.related">
 				<source>Related</source>

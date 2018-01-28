@@ -27,6 +27,10 @@
 				<source>Read more</source>
 				<target>Læs mere</target>
 			</trans-unit>
+			<trans-unit id="listview.back">
+				<source>Back to list</source>
+				<target>Tilbage til liste</target>
+			</trans-unit>
 			<trans-unit id="tx_map_category">
 				<source>Category</source>
 				<target>Kategori</target>
@@ -41,7 +45,7 @@
 			</trans-unit>
 			<trans-unit id="tx_map_category.parent">
 				<source>Parent</source>
-				<target>Overordnede</target>
+				<target>Overordnet</target>
 			</trans-unit>
 			<trans-unit id="tx_map_category.title">
 				<source>Title</source>
@@ -90,6 +94,22 @@
 			<trans-unit id="tx_map_location.zip">
 				<source>Zip</source>
 				<target>Postnummer</target>
+			</trans-unit>
+			<trans-unit id="tx_map_location.list_of_locations">
+				<source>List of locations</source>
+				<target>Liste over steder</target>
+			</trans-unit>
+			<trans-unit id="tx_map_location.single_view_of_location">
+				<source>Location</source>
+				<target>Sted</target>
+			</trans-unit>
+			<trans-unit id="tx_map_location.list_of_categories">
+				<source>Categories</source>
+				<target>Kategorier</target>
+			</trans-unit>
+			<trans-unit id="tx_map_location.single_view_of_category">
+				<source>Category</source>
+				<target>Kategori</target>
 			</trans-unit>
 		</body>
 	</file>
