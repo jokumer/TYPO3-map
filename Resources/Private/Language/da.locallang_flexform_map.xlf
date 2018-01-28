@@ -37,7 +37,7 @@
 			</trans-unit>
 			<trans-unit id="settings.map.options.types.hybrid">
 				<source>Hybrid (mix of roadmap and satellite)</source>
-				<target>Hybrid (Vejkort og satellit blandet)</target>
+				<target>Hybrid (Vejkort og satellit samtidig)</target>
 			</trans-unit>
 			<trans-unit id="settings.map.options.types.roadmap">
 				<source>Roadmap (road map view)</source>

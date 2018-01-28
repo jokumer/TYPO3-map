@@ -1,8 +1,8 @@
 <f:layout name="Default"/>
 
 <f:section name="main">
-	<h2>Single View for Category</h2>
 	<f:flashMessages/>
+	<h2><f:translate key="tx_map_location.single_view_of_category"/></h2>
 	<f:render partial="Category/Properties" arguments="{_all}"/>
-	<f:link.action action="list">Back to list</f:link.action>
+	<f:link.action action="list"><f:translate key="listview.back"/></f:link.action>
 </f:section>

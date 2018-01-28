@@ -26,4 +26,11 @@
 			</f:format.crop>
 		</p>
 	</f:if>
+	<f:if condition="{location.relatedContent}">
+	<div class="c-content-fullwidth-recursive">
+		<p><f:translate key="tx_map_location.related_content"/></p>
+		<f:cObject typoscriptObjectPath="lib.tx_map.render.relatedContent"
+					 data="{location.relatedContentIdList}"/>
+	</div>
+  </f:if>
 </div>

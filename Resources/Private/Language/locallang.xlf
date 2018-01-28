@@ -21,6 +21,9 @@
 			<trans-unit id="pi.map.overlay.infowindow.readmore">
 				<source>Read more</source>
 			</trans-unit>
+			<trans-unit id="listview.back">
+				<source>Back to list</source>
+			</trans-unit>
 			<trans-unit id="tx_map_category">
 				<source>Category</source>
 			</trans-unit>
@@ -68,6 +71,18 @@
 			</trans-unit>
 			<trans-unit id="tx_map_location.zip">
 				<source>Zip</source>
+			</trans-unit>
+			<trans-unit id="tx_map_location.list_of_locations">
+				<source>List of locations</source>
+			</trans-unit>
+			<trans-unit id="tx_map_location.single_view_of_location">
+				<source>Location</source>
+			</trans-unit>
+			<trans-unit id="tx_map_location.list_of_categories">
+				<source>Categories</source>
+			</trans-unit>
+			<trans-unit id="tx_map_location.single_view_of_category">
+				<source>Category</source>
 			</trans-unit>
 		</body>
 	</file>
