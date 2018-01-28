@@ -4,6 +4,8 @@ namespace Jokumer\Map\Utility;
 use Jokumer\Map\Configuration\ExtConf;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Utility\PathUtility;
+use TYPO3\CMS\Core\Utility\VersionNumberUtility;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
 use TYPO3\CMS\Fluid\View\StandaloneView;
 
@@ -43,7 +45,11 @@ class BackendMapUtility
      * @return array
      */
     private function getDefaultSettings($fieldConfiguration) {
-        $extRelPath = ExtensionManagementUtility::extRelPath('map');
+        if (VersionNumberUtility::convertVersionNumberToInteger(TYPO3_branch) >= VersionNumberUtility::convertVersionNumberToInteger('8.4')) {
+            $extRelPath = PathUtility::getRelativePathTo(ExtensionManagementUtility::extPath('map'));
+        } else {
+            $extRelPath = ExtensionManagementUtility::extRelPath('map');
+        }
         $geocodeJSFile = $extRelPath . 'Resources/Public/JavaScript/Backend/txmap.min.js';
         $extConf = GeneralUtility::makeInstance(ExtConf::class);
         $googleMapsApiKey = $extConf->getGoogleMapsApiKey();
